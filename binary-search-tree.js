@@ -261,20 +261,4 @@ function removeDuplicates(array) {
 	return [...new Set(array)]
 }
 
-let newTree = new Tree([5,13,9,2,43,36,12,12,13,38]) 
-
-console.log(newTree.insert(4));
-console.log(newTree.delete(4));
-console.log(prettyPrint(newTree.root));
-console.log(newTree.isBalanced(newTree.root));
-
-newTree.insert(1234);
-newTree.insert(872);
-newTree.insert(1398);
-newTree.insert(4820);
-
-console.log(newTree.isBalanced(newTree.root));
-
-console.log(newTree.reBalance());
-
 export {Tree}

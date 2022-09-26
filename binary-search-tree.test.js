@@ -102,9 +102,56 @@ describe('isBalanced() method checks to see if the tree is balanced', () => {
     });
 });
 
-describe('reBalance() will rebalance the tree using the large nodes that were added', () => {
-    
-})
-
-
-
+describe('reBalance() method rebalances the tree even with large values', () => {
+    it('reBalance() should balance the tree with nodes that have values >100', () => {
+        expect(newTree.reBalance(newTree.root)).toMatchObject({
+            data: 36,
+            leftBranch: {
+                data: 9,
+                leftBranch: {
+                    data: 2,
+                    leftBranch: null,
+                    rightBranch: {
+                        data: 5,
+                        leftBranch: null,
+                        rightBranch: null,
+                    },
+                },
+                rightBranch: {
+                    data: 12,
+                    leftBranch: null,
+                    rightBranch: {
+                        data: 13,
+                        leftBranch: null,
+                        rightBranch: null,
+                    },
+                },
+            },
+            rightBranch: {
+                data: 872,
+                leftBranch: {
+                    data: 38,
+                    leftBranch: null,
+                    rightBranch: {
+                        data: 43,
+                        leftBranch: null,
+                        rightBranch: null,
+                    },
+                },
+                rightBranch: {
+                    data: 1398,
+                    leftBranch: {
+                        data: 1234,
+                        leftBranch: null,
+                        rightBranch: null,
+                    },
+                    rightBranch: {
+                        data: 4820,
+                        leftBranch: null,
+                        rightBranch: null,
+                    },
+                },
+            },
+        });
+    });
+});
